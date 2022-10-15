@@ -1,0 +1,97 @@
+body {
+  background-color: #222831;
+}
+
+canvas {
+  background-color: #393e46;
+  display: none;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 90vh;
+}
+
+.btn {
+  padding: 1em 2em;
+  background-color: #11999e;
+  border: none;
+  color: white;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  transition: 0.8s;
+}
+
+.btn:hover {
+  background-color: #0c7c80;
+  border-radius: 0.5em;
+  transition: 0.8s;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  background-color: white;
+}
+
+.other {
+  display: flex;
+  justify-content: space-between;
+}
+
+.other-btn {
+  border: none;
+  background-color: #11999e;
+  color: white;
+  padding: 0.7em;
+  border-radius: 10em;
+  transition: 0.8s;
+}
+
+.other-btn:hover {
+  background-color: #0c7c80;
+  transition: 0.8s;
+}
+
+.container-2 {
+  display: none;
+  background-color: white;
+  padding: 64px;
+}
+
+.skin {
+  display: none;
+}
+
+.skin-content {
+  background-color: white;
+  padding: 32px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.item {
+  height: 5rem;
+  width: 5rem;
+  background-color: #11999e;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.skin-btn {
+  display: flex;
+  justify-content: center;
+}
