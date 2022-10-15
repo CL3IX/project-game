@@ -56,6 +56,34 @@ const play = () => {
   level1();
 };
 
+const play2 = () => {
+  let skin = document.getElementById("skin");
+  let level = document.getElementById("level");
+  if (skin.style.display == "none") {
+    btn.style.display = "none";
+  } else {
+    skin.style.display = "none";
+    level.style.display = "none";
+    canvas.style.display = "block";
+  }
+
+  level2();
+};
+
+const play3 = () => {
+  let skin = document.getElementById("skin");
+  let level = document.getElementById("level");
+  if (skin.style.display == "none") {
+    btn.style.display = "none";
+  } else {
+    skin.style.display = "none";
+    level.style.display = "none";
+    canvas.style.display = "block";
+  }
+
+  level3();
+};
+
 const level = () => {
   let btn = document.getElementById("btn");
   let level = document.getElementById("level");
@@ -96,6 +124,22 @@ function level1() {
   musuh = new property(1000, 865, 120, 90, "./img/foto1.png", "image");
   gameRunning();
 }
+
+const level2 = () => {
+  // levelOne = new property(0, 0, 1200, 600, "../img/yadzka.jpeg", "background");
+  levelOne = new property(0, 0, 1200, 600, "./img/foto1.png", "background");
+  karakter = new property(160, 600, 80, 120, "./img/foto2.png", "image");
+  musuh = new property(1000, 865, 120, 90, "./img/foto1.png", "image");
+  gameRunning();
+};
+
+const level3 = () => {
+  // levelOne = new property(0, 0, 1200, 600, "../img/yadzka.jpeg", "background");
+  levelOne = new property(0, 0, 1200, 600, "./img/foto1.png", "background");
+  karakter = new property(160, 600, 80, 120, "./img/foto3.png", "image");
+  musuh = new property(1000, 865, 120, 90, "./img/foto1.png", "image");
+  gameRunning();
+};
 
 function gameRunning() {
   this.frame = 0;

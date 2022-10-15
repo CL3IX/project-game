@@ -74,6 +74,7 @@ canvas {
 
 .flex {
   display: flex;
+  flex-direction: column;
 }
 
 .flex div {
@@ -84,11 +85,28 @@ canvas {
 }
 
 .item {
+  position: relative;
   height: 5rem;
   width: 5rem;
-  background-color: #11999e;
+  /* background-color: #11999e; */
   margin-left: 10px;
   margin-right: 10px;
+  background-image: url("img/foto1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item-2 {
+  background-image: url("img/foto2.png");
+}
+
+.item-3 {
+  background-image: url("img/foto3.png");
+}
+
+.item:hover {
+  opacity: 60%;
 }
 
 .skin-btn {
