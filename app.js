@@ -95,6 +95,60 @@ const level = () => {
   }
 };
 
+const modal = () => {
+  let modal = document.getElementById("modal");
+  let level = document.getElementById("level");
+  if (modal.style.display == "none") {
+    modal.style.display = "block";
+  } else {
+    modal.style.display = "block";
+    level.style.display = "none";
+  }
+};
+
+const modal2 = () => {
+  let modal = document.getElementById("modal-2");
+  let level = document.getElementById("level");
+  if (modal.style.display == "none") {
+    modal.style.display = "block";
+  } else {
+    modal.style.display = "block";
+    level.style.display = "none";
+  }
+};
+
+const modal3 = () => {
+  let modal = document.getElementById("modal-3");
+  let level = document.getElementById("level");
+  if (modal.style.display == "none") {
+    modal.style.display = "block";
+  } else {
+    modal.style.display = "block";
+    level.style.display = "none";
+  }
+};
+
+const tutup = () => {
+  let modal = document.getElementById("modal");
+  let modal2 = document.getElementById("modal-2");
+  let modal3 = document.getElementById("modal-3");
+  let level = document.getElementById("level");
+  if (
+    modal.style.display == "none" ||
+    modal2.style.display == "none" ||
+    modal3.style.display == "none"
+  ) {
+    modal.style.display = "none";
+    modal2.style.display = "none";
+    modal3.style.display = "none";
+  } else {
+    modal.style.display = "none";
+    modal2.style.display = "none";
+    modal3.style.display = "none";
+    level.style.display = "block";
+  }
+};
+
 // addeventlistener untuk bisa mengendalikan karakter
 window.addEventListener("keydown", move);
 window.addEventListener("keyup", stopMove);
@@ -263,13 +317,13 @@ function clear() {
 function move(event) {
   const keyPressed = event.keyCode;
   if (keyPressed == left) {
-    karakter.objX = -5;
+    karakter.objX = -3;
   } else if (keyPressed == right) {
-    karakter.objX = 5;
+    karakter.objX = 3;
   } else if (keyPressed == up) {
-    karakter.objY = -5;
+    karakter.objY = -3;
   } else if (keyPressed == down) {
-    karakter.objY = 5;
+    karakter.objY = 3;
   }
 }
 

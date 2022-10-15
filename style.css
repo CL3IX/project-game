@@ -77,6 +77,10 @@ canvas {
   flex-direction: column;
 }
 
+.flex-level {
+  display: flex;
+}
+
 .flex div {
   display: flex;
   justify-content: center;
@@ -112,4 +116,42 @@ canvas {
 .skin-btn {
   display: flex;
   justify-content: center;
+}
+
+#modal {
+  background-color: white;
+  width: 50%;
+  display: none;
+}
+
+#modal-2 {
+  background-color: white;
+  width: 50%;
+  display: none;
+}
+
+#modal-3 {
+  background-color: white;
+  width: 50%;
+  display: none;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.game-text {
+  text-align: center;
+  inline-size: 400px;
+  margin-left: 14px;
+  margin-right: 14px;
 }
