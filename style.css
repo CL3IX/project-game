@@ -211,19 +211,10 @@ body {
   rotate: -30deg;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 480px) {
   body,
   html {
     margin: 0;
     padding: 0;
-  }
-
-  #board {
-    width: 400px;
-    height: 600px;
-    background-color: black;
-    overflow: hidden;
-    overflow-x: hidden;
-    display: none;
   }
 }
