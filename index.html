@@ -2,87 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
   </head>
-  <body onload="level1()">
+  <link rel="stylesheet" href="style.css" />
+  <body>
     <div class="container">
-      <canvas id="game" class="bg-black" width="400" height="600"> </canvas>
       <div class="card" id="btn">
-        <div class="card-content">
-          <h3 class="title">Judul Game</h3>
-          <button class="btn" id="btn" onclick="tampil()">Mulai</button>
-          <button class="btn" id="btn" onclick="skin()">Skin</button>
-          <button class="btn" id="btn" onclick="level()">Level</button>
-          <div class="other">
-            <button class="other-btn"><i class="bi bi-gear"></i></button>
-            <button class="other-btn"><i class="bi bi-gear"></i></button>
-          </div>
+        <div class="btn-center">
+          <h3 class="game-title">
+            <span class="rocket">Rocket</span><span class="shoot">Shoot</span>
+          </h3>
+          <button class="btn" id="btn" onclick="mulai()">Mulai</button>
+          <button class="btn" id="btn" onclick="skins()">Skin</button>
+          <button class="btn" id="btn" onclick="mulai()">Level</button>
+          <span class="roket-1">
+            <img src="img/foto3.png" alt="" width="60%" />
+          </span>
+          <span class="roket-2">
+            <img src="img/foto1.png" alt="" width="60%" />
+          </span>
         </div>
       </div>
-      <div class="container-2" id="skin">
+
+      <div class="card-2" id="skin">
         <div class="flex">
-          <div class="item" onclick="play()"></div>
-          <div class="item item-2" onclick="play2()"></div>
-          <div class="item item-3" onclick="play3()"></div>
+          <div class="item" onclick="skin1()"></div>
+          <div class="item item-2" onclick="skin2()"></div>
+          <div class="item item-3" onclick="skin3()"></div>
+          <button class="btn" id="btn" onclick="back()">Back</button>
+          <span class="roket-1">
+            <img src="img/foto1.png" alt="" width="60%" />
+          </span>
+          <span class="roket-2">
+            <img src="img/foto2.png" alt="" width="60%" />
+          </span>
         </div>
       </div>
-      <div id="modal" class="modal">
-        <span class="close">
-          <button onclick="tutup()">X</button>
-        </span>
-        <div class="modal-content">
-          <h3 class="game-title">Level 1</h3>
-          <p class="game-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in
-            excepturi velit quae recusandae iure, molestias provident voluptates
-            voluptas rem eveniet ipsa iusto iste quibusdam. Reiciendis maxime
-            cupiditate quos dolore.
-          </p>
+      <div id="board">
+        <div class="rocks"></div>
+        <div id="jet"></div>
+        <div class="hs">
+          <img src="img/foto2.png" alt="" /><span id="points">0</span>
         </div>
       </div>
-      <div id="modal-2" class="modal">
-        <span class="close">
-          <button onclick="tutup()">X</button>
-        </span>
-        <div class="modal-content">
-          <h3 class="game-title">Level 2</h3>
-          <p class="game-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in
-            excepturi velit quae recusandae iure, molestias provident voluptates
-            voluptas rem eveniet ipsa iusto iste quibusdam. Reiciendis maxime
-            cupiditate quos dolore.
-          </p>
-        </div>
+      <div class="game-over" id="lanjut">
+        <h3 class="game-over-text">Level 1 Selesai</h3>
+        <p style="display: none">Skor mu <span id="high-score"></span></p>
+        <button class="btn other-btn" onclick="mainLagi()" id=" other-btn">
+          Level 2
+        </button>
       </div>
-      <div id="modal-3" class="modal">
-        <span class="close">
-          <button onclick="tutup()">X</button>
-        </span>
-        <div class="modal-content">
-          <h3 class="game-title">Level 3</h3>
-          <p class="game-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit in
-            excepturi velit quae recusandae iure, molestias provident voluptates
-            voluptas rem eveniet ipsa iusto iste quibusdam. Reiciendis maxime
-            cupiditate quos dolore.
-          </p>
-        </div>
-      </div>
-      <div class="container-2" id="level">
-        <div class="flex-level">
-          <div class="item" onclick="modal()">1</div>
-          <div class="item item-2" onclick="modal2()">2</div>
-          <div class="item item-3" onclick="modal3()">3</div>
-        </div>
+      <div class="game-over" id="go-card">
+        <h3 class="game-over-text">Game Over</h3>
+        <button class="btn other-btn" onclick="mainLagi()" id=" other-btn">
+          Back?
+        </button>
       </div>
     </div>
-    <script src="app.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

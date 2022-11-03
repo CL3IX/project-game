@@ -1,157 +1,229 @@
-body {
-  background-color: #222831;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
-canvas {
-  background-color: #393e46;
-  display: none;
+body {
+  font-family: "VT323", monospace;
+  width: 100%;
+  overflow: hidden;
+  background-color: #111827;
 }
 
 .container {
   display: grid;
   place-items: center;
-  height: 90vh;
+  height: 100vh;
 }
 
-.btn {
-  padding: 1em 2em;
-  background-color: #11999e;
-  border: none;
-  color: white;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  transition: 0.8s;
+#board {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background-color: black;
+  overflow: hidden;
+  display: none;
 }
 
-.btn:hover {
-  background-color: #0c7c80;
-  border-radius: 0.5em;
-  transition: 0.8s;
+#jet {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background: url("img/foto1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 45%;
+  bottom: 40px;
+}
+
+.bullets {
+  position: absolute;
+  bottom: 100px;
+  margin-left: 2.1em;
+  width: 20px;
+  height: 20px;
+  background: url("img/peluru.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.rocks {
+  position: absolute;
+  top: 100px;
+  width: 60px;
+  height: 80px;
+  background: url("img/foto2.png");
+  rotate: 180deg;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .card {
+  position: relative;
+  width: 400px;
+  height: 600px;
   display: flex;
   justify-content: center;
-  padding: 32px;
-  background-color: white;
+  align-items: center;
+  flex-direction: column;
+  background-color: #faf7f0;
+  box-shadow: 0px 1px 4px 0px black;
 }
 
-.other {
+.card-2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+  background-color: #faf7f0;
+  box-shadow: 0px 1px 4px 0px black;
+  display: none;
+  position: relative;
 }
 
-.other-btn {
+.btn {
+  display: block;
+  width: 100%;
   border: none;
-  background-color: #11999e;
+  margin: 12px 0;
+  padding: 1em 4em;
   color: white;
-  padding: 0.7em;
-  border-radius: 10em;
-  transition: 0.8s;
+  transition: 0.7s;
+  background-color: #3c4048;
+  box-shadow: 0px 1px 4px 0px black;
+  font-family: "VT323", monospace;
+  font-size: 14px;
 }
 
-.other-btn:hover {
-  background-color: #0c7c80;
-  transition: 0.8s;
+.btn-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.container-2 {
-  display: none;
-  background-color: white;
-  padding: 64px;
+.btn:hover {
+  background-color: #b2b2b2;
+  border-radius: 6px;
+  transition: 0.7s;
 }
 
-.skin {
-  display: none;
-}
-
-.skin-content {
-  background-color: white;
-  padding: 32px;
+.game-title {
+  text-align: center;
+  font-size: 50px;
 }
 
 .flex {
   display: flex;
-  flex-direction: column;
-}
-
-.flex-level {
-  display: flex;
-}
-
-.flex div {
-  display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .item {
   position: relative;
   height: 5rem;
   width: 5rem;
-  /* background-color: #11999e; */
   margin-left: 10px;
   margin-right: 10px;
   background-image: url("img/foto1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: 0.7s;
+}
+
+.item:hover {
+  opacity: 60%;
+  rotate: 30deg;
+  transition: 0.7s;
 }
 
 .item-2 {
   background-image: url("img/foto2.png");
 }
 
+.item-2:hover {
+  rotate: -30deg;
+}
+
 .item-3 {
   background-image: url("img/foto3.png");
 }
 
-.item:hover {
-  opacity: 60%;
+#points {
+  color: white;
+  margin-left: 5px;
 }
 
-.skin-btn {
+.hs {
+  font-size: 36px;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  margin-top: 10px;
 }
 
-#modal {
+.hs > img {
+  margin-left: 10px;
+  width: 32px;
+}
+
+.game-over {
   background-color: white;
-  width: 50%;
   display: none;
+  padding: 64px;
 }
 
-#modal-2 {
-  background-color: white;
-  width: 50%;
-  display: none;
-}
-
-#modal-3 {
-  background-color: white;
-  width: 50%;
-  display: none;
-}
-
-.modal-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.close {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 10px;
-}
-
-.game-text {
+.game-over > h3 {
   text-align: center;
-  inline-size: 400px;
-  margin-left: 14px;
-  margin-right: 14px;
+}
+
+.game-over > p {
+  text-align: center;
+  font-size: 15px;
+}
+
+.other-btn {
+  width: 100%;
+}
+
+.shoot {
+  color: rgb(196, 9, 9);
+  border-bottom: 4px solid rgb(196, 9, 9);
+}
+
+.rocket {
+  border-top: 4px solid #111827;
+}
+
+.roket-1 {
+  position: absolute;
+  top: 3em;
+  left: -3em;
+  rotate: 140deg;
+}
+
+.roket-2 {
+  position: absolute;
+  bottom: 2em;
+  left: 15em;
+  rotate: -30deg;
+}
+
+@media only screen and (max-width: 640px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  #board {
+    width: 400px;
+    height: 600px;
+    background-color: black;
+    overflow: hidden;
+    overflow-x: hidden;
+    display: none;
+  }
 }
